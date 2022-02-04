@@ -1,0 +1,24 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="xom.com.cmms.sapui.controller.View1" displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <List items="{BooksModel>/}">
+                        <items>
+                            <StandardListItem title="{BooksModel>title}" press="onListItemPress" type="Navigation" />
+                        </items>
+                    </List>
+                    <content/>
+                <footer>
+                    <Bar class="sapContrast sapContrastPlus" id="bar0">
+                        <contentRight>
+                            <Button xmlns="sap.m" text="Add" id="idAddItem" activeIcon="sap-icon://add" type="Accept" press="onAdd"/>
+                            <Button xmlns="sap.m" text="Delete" id="idRemoveItem" activeIcon="sap-icon://delete" type="Reject" press="onDelete"/>
+                        </contentRight>
+                    </Bar>
+                </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
